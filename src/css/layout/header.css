@@ -1,0 +1,39 @@
+/* FILEPATH: /Users/macbook/Desktop/2023-sae-105-NatanBrayetConche/src/css/layout/header.css */
+
+/* Styles pour l'en-tête */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f2f2f2;
+}
+
+/* Styles pour le logo */
+.logo {
+  width: 50px;
+  height: 50px;
+  background-image: url('src/assets/icone/Logo_Kenzo_Tange_signature 1.png.png');
+  background-size: cover;
+}
+
+/* Styles pour le menu */
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+/* Styles pour l'icône de loupe */
+.search-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url('src/assets/icone/Loupe 1.png');
+  background-size: cover;
+  margin-left: 10px;
+}
+
+/* Styles pour les éléments du menu */
+.menu-item {
+  margin-left: 10px;
+  /* Ajoutez d'autres styles selon vos besoins */
+}
