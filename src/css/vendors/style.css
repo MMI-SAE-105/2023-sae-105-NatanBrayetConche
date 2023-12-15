@@ -1,9 +1,8 @@
 @import "components/caroussel.css";
-@import "layout/header.css";
+@import "../layout/header.css";
 @import "base/main.css";
 @import "base/media.css";
 @import "components/menu.css";
-@import "utils/variable.css";
 @import "components/menu.css";
 @import "components/accueil.css";
 @import "layout/footer.css";

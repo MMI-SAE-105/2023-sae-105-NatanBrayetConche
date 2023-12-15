@@ -1,43 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Différentes oeuvres architecturales</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="./src/css/vendors/style.css" />
 
-    <link rel="stylesheet" href="src/css/style.css" />
 
     <link rel="icon" href="src/assets/icone/Logo_Kenzo_Tange_signature 1.png" />
 </head>
 
-<body>
+<body x-data="{menuIsOpen : false}" :class="{noscroll:menuIsOpen}">
     <header>
-        <div class="header">
-            <div class="header__logo">
-                <a href="index.html">
-                    <img src="src/assets/icone/Logo_Kenzo_Tange_signature 1.png" alt="Logo Kenzo Tange">
-                </a>
-
-                <img src="src/assets/icone/Loupe  1.png" alt="Loupe">
-
-                <a href="menu.html">
-                    <img src="src/assets/icone/Menu Burger 1.png" alt="Menu">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="Présentation de Kenzo Tange.html">Présentation de Kenzo Tange</a></li>
-                    <li><a href="Différentes oeuvres architectural.html">Différentes œuvres architectural</a></li>
-                    <li><a href="#billetterie">Billetterie</a></li>
-                </ul>
-            </nav>
-            <div class="header__title">
-                <h1>Kenzō Tange House</h1>
-            </div>
-        </div>
+        <a href="/index.html">
+            <img src="./src/assets/icone/Logo_Kenzo_Tange_signature 1.png" alt="Logo_Kenzo_Tange_signature">
+        </a>
+        <img src="./src/assets/icone/Loupe  1.png" alt="Menu">
+        <img src="./src/assets/icone/Menu Burger 1.png" alt="Menu" @click="menuIsOpen=!menuIsOpen">
+        <nav x-show="menuIsOpen">
+            <ul>
+                <li><a href="Présentation de Kenzo Tange.html">Présentation de Kenzo Tange</a></li>
+                <li><a href="Différentes oeuvres architectural.html">Différentes œuvres architectural</a></li>
+                <li><a href="#billetterie">Billetterie</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
+    <main x-show="!menuIsOpen">
         <section>
             <div class="article__content">
                 <div class="article__content__img">
@@ -56,7 +48,7 @@
                 </div>
         </section>
     </main>
-    <footer>
+    <footer x-show="!menuIsOpen">
         <div class="footer__content">
             <div class="footer__section">
                 <h3>L’architecture de Kenzō Tange</h3>

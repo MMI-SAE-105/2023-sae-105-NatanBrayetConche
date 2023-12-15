@@ -1,60 +1,47 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="menuIsOpen: false" : class="{noscroll:menuIsOpen,}">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="https://unpkg.com/alpinejs"></script>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-<title>L’architecture de Kenzō Tange</title>
+    <title>L’architecture de Kenzō Tange</title>
 
-<link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/vendors/style.css" />
 
-<link rel="icon" href="src/assets/icone/Logo_Kenzo_Tange_signature 1.png" />
+    <link rel="icon" href="src/assets/icone/Logo_Kenzo_Tange_signature 1.png" />
 </head>
-<body>
+
+<body x-data="{menuIsOpen : false}" :class="{noscroll:menuIsOpen}">
+
     <header>
-        <button aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen">
-            <img class="header_logo1" x-show="!menuIsOpen" src="src/assets/icone/Menu Burger 1.png" alt="logomenu">
-            <img class="header_logo2" x-show="menuIsOpen" src="src/assets/icone/icons-fermer-la-fenêtre 1.png" alt="croix">
-        </button>
-        
-        <!--<nav id="mainNav" x-show="menuIsOpen" class="menu">-->
-        <a class="header_logo3" href="index.html">
-            <img src="src/assets/icone/Logo_Kenzo_Tange_signature 1.png" alt="Logo_Kenzo_Tange_signature">
-        </a>
-        <div class="header">
-            <div class="header__logo">
-
-                <img src="src/assets/icone/Loupe  1.png" alt="Loupe">
-
-            <a href="menu.html">
-                <img src="src/assets/icone/Menu Burger 1.png" alt="Menu">
-            </a>
-            </div>
-                    <nav>
-                        <ul>
-                            <li><a href="Présentation de Kenzo Tange.html">Présentation de Kenzo Tange</a></li>
-                            <li><a href="Différentes oeuvres architectural.html">Différentes œuvres architectural</a></li>
-                            <li><a href="#billetterie">Billetterie</a></li>
-                        </ul>
-                    </nav>
-            <div class="header__title">
-                <h1>L’architecture de Kenzō Tange</h1>
-            </div>
-        </div>
+        <img src="./src/assets/icone/Logo_Kenzo_Tange_signature 1.png" alt="Logo_Kenzo_Tange_signature">
+        <img src="./src/assets/icone/Loupe  1.png" alt="Menu">
+        <img src="./src/assets/icone/Menu Burger 1.png" alt="Menu" @click="menuIsOpen=!menuIsOpen">
+        <nav x-show="menuIsOpen">
+            <ul>
+                <li><a href="Présentation de Kenzo Tange.html">Présentation de Kenzo Tange</a></li>
+                <li><a href="Différentes oeuvres architectural.html">Différentes œuvres architectural</a></li>
+                <li><a href="#billetterie">Billetterie</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
+    <main x-show="!menuIsOpen">
         <section>
             <div class="section__content">
-             <p>
-                Du 13 avril au 23 juin 2024 Lieu de l’exposition :
-             </p>
-             <p>
-                Fondation Cartier, 261 Bd Raspail, 75014 Paris
-                Horaires d’ouverture : Tous les jours de 11h à 20h, sauf le lundi. Nocturne le mardi, jusqu'à 22h. La fermeture des
-                salles débute à 19h45 (21h45 les mardis).
-                Titre de l’exposition : L’architecture de Kenzō Tange
-             </p>    
+                <p>
+                    Du 13 avril au 23 juin 2024 Lieu de l’exposition :
+                </p>
+                <p>
+                    Fondation Cartier, 261 Bd Raspail, 75014 Paris
+                    Horaires d’ouverture : Tous les jours de 11h à 20h, sauf le lundi. Nocturne le mardi, jusqu'à 22h.
+                    La fermeture des
+                    salles débute à 19h45 (21h45 les mardis).
+                    Titre de l’exposition : L’architecture de Kenzō Tange
+                </p>
             </div>
 
             <article>
@@ -68,12 +55,14 @@
                         <img src="src/assets/icone/icons8-flèche-droite-48 1.png" alt="flèche-droite">
                     </div>
                     <div class="article__content__img">
-                        <img src="src/assets/img/Hiroshima Peace Memorial Museum 2.webp" alt="Hiroshima Peace Memorial Museum">
+                        <img src="src/assets/img/Hiroshima Peace Memorial Museum 2.webp"
+                            alt="Hiroshima Peace Memorial Museum">
                         <img src="src/assets/icone/icons8-flèche-gauche-48 1.png" alt="flèche-gauche">
                         <img src="src/assets/icone/icons8-flèche-droite-48 1.png" alt="flèche-droite">
                     </div>
                     <div class="article__content__img">
-                        <img src="src/assets/img/Kagawa Prefectural Government Hall  2.webp" alt="Kagawa Prefectural Government Hall">
+                        <img src="src/assets/img/Kagawa Prefectural Government Hall  2.webp"
+                            alt="Kagawa Prefectural Government Hall">
                         <img src="src/assets/icone/icons8-flèche-gauche-48 1.png" alt="flèche-gauche">
                         <img src="src/assets/icone/icons8-flèche-droite-48 1.png" alt="flèche-droite">
                     </div>
@@ -83,7 +72,8 @@
                         <img src="src/assets/icone/icons8-flèche-droite-48 1.png" alt="flèche-droite">
                     </div>
                     <div class="article__content__img">
-                        <img src="src/assets/img/Yoyogi-National-First-Gymnasium-01 2.webp" alt="Yoyogi-National-First-Gymnasium-01">
+                        <img src="src/assets/img/Yoyogi-National-First-Gymnasium-01 2.webp"
+                            alt="Yoyogi-National-First-Gymnasium-01">
                         <img src="src/assets/icone/icons8-flèche-gauche-48 1.png" alt="flèche-gauche">
                         <img src="src/assets/icone/icons8-flèche-droite-48 1.png" alt="flèche-droite">
                     </div>
@@ -93,7 +83,8 @@
                         <img src="src/assets/icone/icons8-flèche-droite-48 1.png" alt="flèche-droite">
                     </div>
                     <div class="article__content__img">
-                        <img src="src/assets/img/Tokyo Metropolitan Government Building 2.webp" alt="Tokyo Metropolitan Government Building">
+                        <img src="src/assets/img/Tokyo Metropolitan Government Building 2.webp"
+                            alt="Tokyo Metropolitan Government Building">
                         <img src="src/assets/icone/icons8-flèche-gauche-48 1.png" alt="flèche-gauche">
                         <img src="src/assets/icone/icons8-flèche-droite-48 1.png" alt="flèche-droite">
                     </div>
@@ -113,18 +104,19 @@
                         <li>Tarif réduit ⇒ 7,50€</li>
                         <li>Réduction 13 - 25 ans ⇒ 5€</li>
                         <li>Fondation Cartier Pass ⇒ 18€ - 50€</li>
-                        <li>Moins de 13 ans, Laissez-passer annuel, carte Icom, carte de presse, carte d'invalidité, Fondation Cartier Pass, Etudiants ⇒ Gratuit</li>
+                        <li>Moins de 13 ans, Laissez-passer annuel, carte Icom, carte de presse, carte d'invalidité,
+                            Fondation Cartier Pass, Etudiants ⇒ Gratuit</li>
                     </ul>
                 </div>
             </section>
             <h2>
                 Billetterie
             </h2>
-            <img src="src/assets/icone/icons-flèche 1.png" alt="flèche"> 
+            <img src="src/assets/icone/icons-flèche 1.png" alt="flèche">
             <img src="src/assets/icone/icons-aller 1.png" alt="aller">
         </section>
     </main>
-    <footer>
+    <footer x-show="!menuIsOpen">
         <div class="footer__content">
             <div class="footer__section">
                 <h3>L’architecture de Kenzō Tange</h3>
@@ -133,28 +125,29 @@
                     <li><a href="/">Billetterie</a></li>
                     <li><a href="Présentation de Kenzo Tange.html">Présentation de Kenzo Tange</a></li>
                     <li><a href="Différentes oeuvres architectural.html">
-                        Différentes oeuvres architectural de Kenzō Tange</a></li>
-                    </ul>
-                    </div>
-                    <div class="footer__section">
-                        <h3>Contact</h3>
-                        <p>97 rue des Coudriers</p>
-                        <p>68200 Mulhouse</p>
-                        <p>03 09 07 48 17</p>
-                        <p>natanbrayetconche@gmail.com</p>
-                    </div>
-                    <div class="footer__section">
-                        <h3>Nous suivre</h3>
-                        <img src="src/assets/icone/icons-facebook 2.png" alt="Facebook">
-                        <img src="src/assets/icone/icons-instagram.png" alt="Instagram">
-                        <img src="src/assets/icone/icons-twitterx.png" alt="icons-twitterx">
-                    </div>
-                    <div class="footer_logo">
-                        <a href="index.html">
-                            <img src="src/assets/icone/Logo_Kenzo_Tange_signature 1.png" alt="Logo Kenzo Tange">
-                        </a>
+                            Différentes oeuvres architectural de Kenzō Tange</a></li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                <h3>Contact</h3>
+                <p>97 rue des Coudriers</p>
+                <p>68200 Mulhouse</p>
+                <p>03 09 07 48 17</p>
+                <p>natanbrayetconche@gmail.com</p>
+            </div>
+            <div class="footer__section">
+                <h3>Nous suivre</h3>
+                <img src="src/assets/icone/icons-facebook 2.png" alt="Facebook">
+                <img src="src/assets/icone/icons-instagram.png" alt="Instagram">
+                <img src="src/assets/icone/icons-twitterx.png" alt="icons-twitterx">
+            </div>
+            <div class="footer_logo">
+                <a href="index.html">
+                    <img src="src/assets/icone/Logo_Kenzo_Tange_signature 1.png" alt="Logo Kenzo Tange">
+                </a>
             </div>
         </div>
     </footer>
 </body>
+
 </html>
